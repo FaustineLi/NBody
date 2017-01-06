@@ -77,4 +77,15 @@ public class Planet {
 		}
 		return net;
 	}
+
+	public void update(double dt, double xforce, double yforce) {
+		double ax = xforce / myMass;
+		double ay = yforce / myMass;
+		myXVel = myXVel + ax * dt;
+		myYVel = myYVel + ay * dt;
+		myXPos = myXPos + myXVel * dt;
+		myYPos = myYPos + myYVel * dt;
+	}
+
+	
 }
