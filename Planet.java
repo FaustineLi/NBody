@@ -87,5 +87,8 @@ public class Planet {
 		myYPos = myYPos + myYVel * dt;
 	}
 
-	
+	public void draw() {
+		String picFile = "images/" + myFileName;
+		StdDraw.picture(myXPos, myYPos, picFile);
+	}
 }
